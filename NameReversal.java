@@ -6,6 +6,7 @@
  */
 // public class - the class name MUST match the file name
 // class - it can be any name (needs confirmation)
+import java.util.Scanner;
 public class NameReversal {
 	public static void main(String args[]) {
 		// number 1
@@ -58,5 +59,22 @@ public class NameReversal {
 			num2 = asdf2 * i;
 			System.out.println("num2 = " + num2);
 		}
+		/*
+		 * Project: Name Reversal
+		 * Description: Enter your name. Using a for loop, reverse your name and print
+		 * E.g. Simon Park -> kraP nomiS
+		 * Date: 15 September, 2015
+		 */
+		String name;
+		String revName = "";
+		Scanner scan = new Scanner(System.in);
+		System.out.println("\n\nEnter your name: ");
+		name = scan.nextLine();
+		System.out.println("Your name is: " + name);
+		for (int i = name.length()-1; i >= 0; i--) { // start at 5
+			revName = revName + name.charAt(i);
+			// revName = revName + name.substring (i, i+1);
+		}
+		System.out.println("Your reversed name is: " + revName);
 	}
 }
